@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  background-color: #333;
+  /* font-family: ; */
+  height: 100%;
+}
+section {
+  width: 95%;
+  height: 100%; 
+  margin: 20px auto;
+  overflow: hidden;
+  font-family: sans-serif;
+  position: relative;
+  background-color: #fff;
+  transition: 0.3s;
+  border-radius: 14px;
+}
+input {
+  display: none;
+  width: 74px;
+  height: 47px;
+}
+nav {
+  width: 5%;
+  height: 100%;
+  background: #3f3d56;
+  /* background: #178673; */
+  float: left;
+  transition: 0.5s;
+  position: absolute;
+  /* border-radius: 13px; */
+}
+input.checkbox-nav:checked ~ nav {
+  width: 20%;
+}
+input.checkbox-nav:checked ~ .toggle-nav {
+  left: 22%;
+}
+input.checkbox-nav:checked ~ label .fa-bars {
+  display: none;
+}
+input.checkbox-nav:checked ~ label .fa-times {
+  display: block;
+}
+
+label .fa-solid {
+  /* display: none; */
+  /* width: 0px; */
+  opacity: 0;
+  transition: 0.5s;
+}
+input.checkbox-theme:checked ~ label .fa-solid {
+  /* display: block; */
+  opacity: 1;
+  transition: 0.5s;
+}
+input.checkbox-theme:checked ~ label .fa-regular {
+  /* display: none; */
+  opacity: 0;
+  transition: 0.5s;
+}
+input.checkbox-theme:checked ~ section {
+  /* display: none; */
+  background-color: #2f2e41;
+  background-color: #111927;
+
+  transition: 0.3s;
+  color: whitesmoke;
+}
+input.checkbox-theme:checked ~ section h1 {
+  /* display: none; */
+  color: #fff;
+}
+input.checkbox-theme:checked ~ section h3 {
+  /* display: none; */
+  color: #00bfa6;
+}
+input.checkbox-theme:checked ~ section p {
+  /* display: none; */
+  color: gainsboro;
+}
+
+label .fa-moon {
+  font-size: 20px;
+  width: 25px;
+}
+
+.toggle-theme {
+  cursor: pointer;
+  position: relative;
+}
+.toggle-theme i {
+  top: 4px;
+  position: absolute;
+}
+.toggle-nav {
+  position: absolute;
+  left: 6%;
+  top: 8px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+label .fa-times {
+  display: none;
+}
+ul {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+ul li{
+  list-style: none;
+  /* margin: 2px; */
+  overflow: hidden;
+}
+nav ul li {
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  /* background-color: #111927; */
+
+}
+nav ul{
+  padding: 10px;
+
+}
+li a{
+  text-decoration: none;
+  color: #2f2e41;
+  
+  /* text-align: center; */
+}
+nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+li a .fa {
+  font-size: 18px;
+  width: 100%;
+  /* margin-left: 10px; */
+  text-align: center;
+  z-index: 100;
+}
+li a span {
+  font-size: 14px;
+  margin-left: 10px;
+  display: none;
+}
+input.checkbox-nav:checked ~  nav ul li a span {
+display: inline-block;
+
+
+}
+input.checkbox-nav:checked ~  nav ul li a i {
+  width: 25px;
+}
+input.checkbox-nav:checked ~ main {
+  /* width: 78%; */
+}
+main {
+  width: 85%;
+  height: 100%;
+  /* background-color: #000; */
+  /* float:inline-end; */
+  margin: 0 auto;
+  transition: 0.5s;
+}
+main header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px whitesmoke;
+}
+
+header a {
+  padding: 0 5px;
+  margin: 0 10px;
+  text-decoration: none;
+  color: inherit;
+}
+header a.hire-btn-top {
+  background-color: #00bfa6;
+  color: #fff;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  float: right;
+/* background: #000; */
+}
+.main .banner {
+  width: 98%;
+  height: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.main .banner .content,
+.main .banner img {
+  width: 50%;
+}
+.main .banner img {
+  height: 90%;
+}
+.main .banner div h1 {
+  font-size: 80px;
+  padding: 2px 0px 2px 50px;
+  color: #333;
+}
+.main .banner h3 {
+  padding: 2px 0px 2px 50px;
+  color: #333;
+}
+.main .banner p {
+  line-height: 27px;
+  padding: 2px 0 2px 50px;
+  text-align: justify;
+}
+
+.main .banner img {
+  height: 90%;
+  margin-top: 30px;
+}
+.main > p {
+  text-align: center;
+  margin-top: 8rem;
+}
